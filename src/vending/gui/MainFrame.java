@@ -242,9 +242,13 @@ public class MainFrame extends JFrame {
         guardar.addActionListener(e -> saveVmFile());
 
         analizar.addActionListener(e -> {
-            controller.analyzeSource(editor.getText());
-            refreshFromController();
-        });
+        controller.analyzeSource(editor.getText());
+
+        VendingViewModel vm = controller.getViewModel();
+
+        results.setText(vm.message());
+        tabs.setSelectedIndex(1);
+    });
 
         ejecutar.addActionListener(e -> {
             controller.executeNextInstruction();
