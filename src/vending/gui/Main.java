@@ -2,6 +2,7 @@ package vending.gui;
 
 import javax.swing.*;
 import java.util.List;
+import vending.analizador.AnalizadorCompleto;
 
 /**
  * Punto de entrada temporal.
@@ -20,6 +21,7 @@ public class Main {
 
     private static class DemoController implements VendingController {
 
+        private String resultadoAnalisis = "";
         private VendingViewModel model = new VendingViewModel(
                 List.of(
                         new ProductView("A1", "AGUA", 5, 10),
@@ -177,6 +179,11 @@ public class Main {
 
         @Override
         public void analyzeSource(String source) {
+
+             AnalizadorCompleto analizador = new AnalizadorCompleto();
+
+            resultadoAnalisis = analizador.analizar(source);
+
             model = new VendingViewModel(
                     model.products(),
                     model.balance(),
@@ -185,9 +192,9 @@ public class Main {
                     model.selectedProduct(),
                     model.deliveredProduct(),
                     model.change(),
-                    "[GUI] Código enviado al analizador."
-            );
-        }
+                    resultadoAnalisis
+        );
+    }
 
         @Override
         public void executeNextInstruction() {
