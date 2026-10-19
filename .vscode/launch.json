@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "GUI con lógica real",
+      "request": "launch",
+      "mainClass": "vending.logica.MainConLogica",
+      "vmArgs": "-Dfile.encoding=UTF-8"
+    },
+    {
+      "type": "java",
+      "name": "GUI demo (sin backend)",
+      "request": "launch",
+      "mainClass": "vending.gui.Main",
+      "vmArgs": "-Dfile.encoding=UTF-8"
+    },
+    {
+      "type": "java",
+      "name": "PruebaLogica (consola)",
+      "request": "launch",
+      "mainClass": "vending.logica.PruebaLogica",
+      "vmArgs": "-Dfile.encoding=UTF-8",
+      "console": "integratedTerminal"
+    }
+  ]
+}
