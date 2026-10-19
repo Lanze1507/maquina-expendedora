@@ -39,7 +39,7 @@ Resultado r = maquina.ejecutar("MONEDA", Arrays.asList("5"), numeroLinea);
 
 **Autómata finito:** la máquina usa la interfaz `vending.automata.ControlEstados`
 (`getEstado()`, `puedeTransitar(Entrada)`, `transitar(Entrada)`, `reiniciar()`).
-`AutomataMaquina` es una implementación de referencia; si el compañero del autómata entrega la suya:
+Por defecto usa `AutomataFinito` (parte de Jesser Cetino, ver `docs/AutomataFinito.md`). Se puede inyectar otro:
 ```java
 new MaquinaExpendedora(inventario, automataDelCompanero);
 ```

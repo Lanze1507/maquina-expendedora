@@ -1,6 +1,6 @@
 package vending.automata;
 
-/** Estados del autómata de compra (numeral 5.1 del enunciado). */
+/** Los seis estados exigidos por el apartado 5 del proyecto. */
 public enum Estado {
     E0("Esperando dinero"),
     E1("Dinero ingresado"),
@@ -21,6 +21,6 @@ public enum Estado {
 
     @Override
     public String toString() {
-        return name() + ": " + descripcion;
+        return name() + " - " + descripcion;
     }
 }
