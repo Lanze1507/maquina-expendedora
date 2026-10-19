@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import vending.automata.AutomataMaquina;
+import vending.automata.AutomataFinito;
 import vending.automata.ControlEstados;
 import vending.automata.Entrada;
 import vending.automata.Estado;
@@ -57,7 +57,7 @@ public class MaquinaExpendedora {
     // ------------------------------------------------------------------ constructores
 
     public MaquinaExpendedora(Inventario inventario) {
-        this(inventario, new AutomataMaquina());
+        this(inventario, new AutomataFinito());
     }
 
     public MaquinaExpendedora(Inventario inventario, ControlEstados automata) {
